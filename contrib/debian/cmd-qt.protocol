@@ -1,0 +1,11 @@
+[Protocol]
+exec=cmd-qt '%u'
+protocol=cmd
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

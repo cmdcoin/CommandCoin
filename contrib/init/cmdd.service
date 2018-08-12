@@ -1,0 +1,26 @@
+[Unit]
+Description=Cmd's distributed currency daemon
+After=network.target
+
+[Service]
+User=cmd
+Group=cmd
+
+Type=forking
+PIDFile=/var/lib/cmdd/cmdd.pid
+
+ExecStart=/usr/bin/cmdd -daemon -pid=/var/lib/cmdd/cmdd.pid \
+          -conf=/etc/cmd/cmd.conf -datadir=/var/lib/cmdd
+
+ExecStop=-/usr/bin/cmd-cli -conf=/etc/cmd/cmd.conf \
+         -datadir=/var/lib/cmdd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

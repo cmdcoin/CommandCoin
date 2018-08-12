@@ -1,0 +1,26 @@
+# /etc/conf.d/cmdd: config file for /etc/init.d/cmdd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/cmd/cmd.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/cmdd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/cmdd.pid"
+
+# Where to write cmdd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/cmdd"
+
+# User and group to own cmdd process
+#BITCOIND_USER="cmd"
+#BITCOIND_GROUP="cmd"
+
+# Path to cmdd executable
+#BITCOIND_BIN="/usr/bin/cmdd"
+
+# Nice value to run cmdd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
