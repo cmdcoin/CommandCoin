@@ -11,8 +11,8 @@ CMD Core 1.0.0.1
 ## Links:
 
 - Website: https://commandcoin.net
-- Explorer: http://explorer.commandcoin.net/
-- Github: https://github.com/commandcoin
+- Explorer: http://explorer.commandcoin.net:3001
+- Github: https://github.com/cmdcoin/CommandCoin
 
 
 License
